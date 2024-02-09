@@ -221,6 +221,12 @@
         "com.unity.inputsystem": "1.2.0"
       }
     },
+    "gay.lvna.ui": {
+      "version": "file:gay.lvna.ui",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,
