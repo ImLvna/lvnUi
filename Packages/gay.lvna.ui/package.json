@@ -6,7 +6,8 @@
   "gitDependencies": {},
   "vpmDependencies": {
     "com.vrchat.worlds": "3.5.0",
-    "sh.orels.udontoolkit": "1.1.2"
+    "sh.orels.udontoolkit": "1.1.2",
+    "gay.lvna.common.udon": "0.0.3"
   },
   "author": {
     "name": "Luna",

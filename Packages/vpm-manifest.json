@@ -5,6 +5,9 @@
     },
     "sh.orels.udontoolkit": {
       "version": "1.1.2"
+    },
+    "gay.lvna.common.udon": {
+      "version": "0.0.3"
     }
   },
   "locked": {
@@ -21,6 +24,12 @@
     "sh.orels.udontoolkit": {
       "version": "1.1.2",
       "dependencies": {}
+    },
+    "gay.lvna.common.udon": {
+      "version": "0.0.3",
+      "dependencies": {
+        "com.vrchat.worlds": "3.5.0"
+      }
     }
   }
 }

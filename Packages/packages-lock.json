@@ -222,9 +222,9 @@
       }
     },
     "gay.lvna.common.udon": {
-      "version": "file:D:/vrcprojects/lvnCommonUdon/Packages/gay.lvna.common.udon",
+      "version": "file:gay.lvna.common.udon",
       "depth": 0,
-      "source": "local",
+      "source": "embedded",
       "dependencies": {}
     },
     "gay.lvna.ui": {
