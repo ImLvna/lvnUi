@@ -1,1 +1,1 @@
-# Luna's Package Template for vrcworld and udon!
+# Luna's UdonSharp UI Toolkit

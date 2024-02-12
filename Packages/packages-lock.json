@@ -221,6 +221,12 @@
         "com.unity.inputsystem": "1.2.0"
       }
     },
+    "gay.lvna.common.udon": {
+      "version": "file:D:/vrcprojects/lvnCommonUdon/Packages/gay.lvna.common.udon",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "gay.lvna.ui": {
       "version": "file:gay.lvna.ui",
       "depth": 0,
