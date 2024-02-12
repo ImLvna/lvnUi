@@ -55,7 +55,7 @@ namespace gay.lvna.ui.core.scroll
             }
         }
 
-        GameObject[] entries
+        public GameObject[] entries
         {
             get
             {
