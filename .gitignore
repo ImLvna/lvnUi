@@ -59,6 +59,6 @@ crashlytics-build.properties
 .vscode
 
 UserSettings
-/[Aa]ssets/**/*
-!/[Aa]ssets/TestAssets/**/*
-!/[Aa]ssets/.gitkeep
+
+Assets/*
+!Assets/Luna
