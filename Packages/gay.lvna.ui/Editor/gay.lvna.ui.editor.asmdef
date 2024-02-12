@@ -6,7 +6,9 @@
         "VRC.SDK3.Editor",
         "VRC.SDKBase",
         "VRC.SDKBase.Editor",
-        "gay.lvna.ui"
+        "gay.lvna.ui",
+        "UdonSharp.Editor",
+        "UdonSharp.Runtime"
     ],
     "includePlatforms": [
         "Editor"
