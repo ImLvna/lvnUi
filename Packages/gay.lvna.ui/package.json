@@ -5,7 +5,8 @@
   "description": "Luna's Customizable UI package",
   "gitDependencies": {},
   "vpmDependencies": {
-    "com.vrchat.worlds": "3.5.0"
+    "com.vrchat.worlds": "3.5.0",
+    "sh.orels.udontoolkit": "1.1.2"
   },
   "author": {
     "name": "Luna",

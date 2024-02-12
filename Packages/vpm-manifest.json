@@ -2,6 +2,9 @@
   "dependencies": {
     "com.vrchat.worlds": {
       "version": "3.5.0"
+    },
+    "sh.orels.udontoolkit": {
+      "version": "1.1.2"
     }
   },
   "locked": {
@@ -13,6 +16,10 @@
     },
     "com.vrchat.base": {
       "version": "3.5.0",
+      "dependencies": {}
+    },
+    "sh.orels.udontoolkit": {
+      "version": "1.1.2",
       "dependencies": {}
     }
   }
