@@ -1,0 +1,23 @@
+{
+    "name": "gay.lvna.ui",
+    "rootNamespace": "gay.lvna.ui",
+    "references": [
+        "VRC.SDK3",
+        "VRC.SDKBase",
+        "VRC.Udon",
+        "VRC.Udon.Serialization.OdinSerializer",
+        "UdonSharp.Runtime",
+        "Unity.TextMeshPro",
+        "UdonToolkitRuntime",
+        "gay.lvna.common.udon"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
