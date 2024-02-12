@@ -83,6 +83,7 @@ namespace gay.lvna.ui.core.scroll
 
         public void RemoveEntry(GameObject entry)
         {
+            entry.GetComponent<ScrollEntry>().isDestroyed = true;
             Destroy(entry);
             Layout();
         }
@@ -117,6 +118,10 @@ namespace gay.lvna.ui.core.scroll
 
             foreach (GameObject entry in entries)
             {
+                if (entry == null || entry.GetComponent<ScrollEntry>().isDestroyed)
+                {
+                    continue;
+                }
                 RectTransform entryRect = entry.GetComponent<RectTransform>();
                 entryRect.anchoredPosition = new Vector2(left, -top);
                 entryRect.sizeDelta = new Vector2(stepWidth, stepHeight);

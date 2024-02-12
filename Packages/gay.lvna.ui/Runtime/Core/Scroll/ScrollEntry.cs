@@ -13,6 +13,8 @@ namespace gay.lvna.ui.core.scroll
   {
     [HideInInspector]
     public DataToken data;
+    [HideInInspector]
+    public bool isDestroyed = false;
 
     public void OnClick()
     {
