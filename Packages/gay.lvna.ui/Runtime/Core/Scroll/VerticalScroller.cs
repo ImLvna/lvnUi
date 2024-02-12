@@ -7,6 +7,8 @@ using UdonToolkit;
 using UnityEngine.Events;
 using gay.lvna.common.udon.extensions;
 using TMPro;
+using VRC.SDK3.Data;
+
 
 
 
@@ -70,12 +72,11 @@ namespace gay.lvna.ui.core.scroll
             }
         }
 
-        public GameObject AddEntry(string data)
+        public GameObject AddEntry(DataToken data)
         {
             GameObject entry = Instantiate(template, content.transform);
             entry.SetActive(true);
             entry.GetComponent<ScrollEntry>().data = data;
-            entry.name = data;
             Layout();
             return entry;
         }
@@ -86,7 +87,7 @@ namespace gay.lvna.ui.core.scroll
             Layout();
         }
 
-        public ScrollEntry GetEntry(string data)
+        public ScrollEntry GetEntry(DataToken data)
         {
             foreach (GameObject entry in entries)
             {
@@ -137,7 +138,7 @@ namespace gay.lvna.ui.core.scroll
         }
 
 
-        public void OnClick(string data)
+        public void OnClick(DataToken data)
         {
             Debug.Log(onClickCallback);
             if (onClickCallback != null)

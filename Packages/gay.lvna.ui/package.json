@@ -1,7 +1,7 @@
 {
   "name": "gay.lvna.ui",
   "displayName": "Luna - UI",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Luna's Customizable UI package",
   "gitDependencies": {},
   "vpmDependencies": {

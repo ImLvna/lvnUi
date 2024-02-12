@@ -2,6 +2,7 @@
 using UdonSharp;
 using UdonToolkit;
 using UnityEngine;
+using VRC.SDK3.Data;
 using VRC.SDKBase;
 using VRC.Udon;
 
@@ -11,7 +12,7 @@ namespace gay.lvna.ui.core.scroll
   public class ScrollEntry : UdonSharpBehaviour
   {
     [HideInInspector]
-    public string data;
+    public DataToken data;
 
     public void OnClick()
     {

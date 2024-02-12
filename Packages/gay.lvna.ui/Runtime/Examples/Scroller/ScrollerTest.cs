@@ -7,27 +7,30 @@ using UnityEngine.UI;
 using VRC.SDKBase;
 using VRC.Udon;
 
-[RequireComponent(typeof(VerticalScroller))]
-public class ScrollerTest : UdonSharpBehaviour
+namespace gay.lvna.ui.examples
 {
-    [FieldChangeCallback("onClickCallbackSet")]
-    public string onClickCallback;
-    public string onClickCallbackSet
+    [RequireComponent(typeof(VerticalScroller))]
+    public class ScrollerTest : UdonSharpBehaviour
     {
-        set
+        [FieldChangeCallback("onClickCallbackSet")]
+        public string onClickCallback;
+        public string onClickCallbackSet
         {
-            Debug.Log("onClickCallback: " + value);
+            set
+            {
+                Debug.Log("onClickCallback: " + value);
+            }
         }
-    }
 
-    public void Start()
-    {
-        VerticalScroller scroller = GetComponent<VerticalScroller>();
-        scroller.onClickCallback = this;
-        scroller.onClickCallbackVar = "onClickCallback";
+        public void Start()
+        {
+            VerticalScroller scroller = GetComponent<VerticalScroller>();
+            scroller.onClickCallback = this;
+            scroller.onClickCallbackVar = "onClickCallback";
 
-        scroller.AddEntry("Entry 1").GetComponentInChildren<TextMeshProUGUI>().text = "Entry 1";
-        scroller.AddEntry("Entry 2").GetComponentInChildren<TextMeshProUGUI>().text = "Entry 2";
-        scroller.AddEntry("Entry 3").GetComponentInChildren<TextMeshProUGUI>().text = "Entry 3";
+            scroller.AddEntry("Entry 1").GetComponentInChildren<TextMeshProUGUI>().text = "Entry 1";
+            scroller.AddEntry("Entry 2").GetComponentInChildren<TextMeshProUGUI>().text = "Entry 2";
+            scroller.AddEntry("Entry 3").GetComponentInChildren<TextMeshProUGUI>().text = "Entry 3";
+        }
     }
 }
