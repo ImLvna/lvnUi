@@ -55,46 +55,68 @@ namespace gay.lvna.ui.core.scroll
             }
         }
 
-        public GameObject[] entries
+        public ScrollEntry[] entries
         {
             get
             {
-                GameObject[] entries = new GameObject[0];
+                ScrollEntry[] entries = new ScrollEntry[0];
                 for (int i = 0; i < content.transform.childCount; i++)
                 {
-                    if (content.transform.GetChild(i).gameObject == template)
+                    Transform child = content.transform.GetChild(i);
+                    if (child.gameObject == template)
                     {
                         continue;
                     }
-                    entries = entries.Add(content.transform.GetChild(i).gameObject);
+                    ScrollEntry entry = child.GetComponent<ScrollEntry>();
+                    if (entry == null || entry.isDestroyed)
+                    {
+                        continue;
+                    }
+                    entries = entries.Add(entry);
                 }
                 return entries;
             }
         }
 
-        public GameObject AddEntry(DataToken data)
+        public ScrollEntry AddEntry(DataToken data)
         {
             GameObject entry = Instantiate(template, content.transform);
             entry.SetActive(true);
             entry.GetComponent<ScrollEntry>().data = data;
             Layout();
-            return entry;
+            return entry.GetComponent<ScrollEntry>();
         }
 
-        public void RemoveEntry(GameObject entry)
+        public void RemoveEntry(GameObject go)
         {
-            entry.GetComponent<ScrollEntry>().isDestroyed = true;
-            Destroy(entry);
+            ScrollEntry entry = go.GetComponent<ScrollEntry>();
+            if (entry != null)
+            {
+                RemoveEntry(entry);
+            }
+        }
+        public void RemoveEntry(DataToken data)
+        {
+            ScrollEntry entry = GetEntry(data);
+            if (entry != null)
+            {
+                RemoveEntry(entry);
+            }
+        }
+        public void RemoveEntry(ScrollEntry entry)
+        {
+            entry.isDestroyed = true;
+            Destroy(entry.gameObject);
             Layout();
         }
 
         public ScrollEntry GetEntry(DataToken data)
         {
-            foreach (GameObject entry in entries)
+            foreach (ScrollEntry entry in entries)
             {
-                if (entry.GetComponent<ScrollEntry>().data == data)
+                if (entry.data == data)
                 {
-                    return entry.GetComponent<ScrollEntry>();
+                    return entry;
                 }
             }
             return null;
@@ -116,9 +138,9 @@ namespace gay.lvna.ui.core.scroll
                 template.GetComponent<RectTransform>().sizeDelta = new Vector2(stepWidth, stepHeight);
             }
 
-            foreach (GameObject entry in entries)
+            foreach (ScrollEntry entry in entries)
             {
-                if (entry == null || entry.GetComponent<ScrollEntry>().isDestroyed)
+                if (entry == null || entry.isDestroyed)
                 {
                     continue;
                 }
